@@ -387,10 +387,12 @@ const SynchroTechWebsite = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      <TargetCursor
-        spinDuration={2}
-        hideDefaultCursor={true}
-      />
+      <div className="hidden md:block">
+        <TargetCursor
+          spinDuration={2}
+          hideDefaultCursor={true}
+        />
+      </div>
       <MouseFollowingBackground />
 
       {/* Navigation */}
@@ -402,7 +404,7 @@ const SynchroTechWebsite = () => {
               <img
                 src={logo}
                 alt="SynchroTech Logo"
-                className="w-auto h-2 md:h-10"  // Adjust height as needed
+                className="hidden md:block w-auto h-2 md:h-10"  // Hidden on small screens, visible from md and up
               />
             </div>
 
